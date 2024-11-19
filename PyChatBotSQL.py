@@ -92,7 +92,7 @@ def generate_response(prompt, model_engine, chat_history):
 def ask():
     user_input = request.form['user_input']
     chat_history = load_history() #load history from database
-    response - generate_response(user_input, model_engine, chat_history)
+    response = generate_response(user_input, model_engine, chat_history)
     save_history(chat_history)
     return jsonify({'response': response})
 
